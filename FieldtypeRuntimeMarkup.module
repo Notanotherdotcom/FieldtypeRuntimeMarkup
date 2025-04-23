@@ -167,10 +167,10 @@ class FieldtypeRuntimeMarkup extends FieldtypeText {
 		$f->notes = $this->_('Any PHP, JavaScript or CSS files specified in settings below must descend from either of these two root path options. Files in sub-folders are OK as long as those reside in one of the two root paths.');
 		#$f->showIf = 'runtimeCodeMode=2';
 		#$f->requiredIf = 'runtimeCodeMode=2';
-		$radioOptions = array (
-			1 => __('/site/templates/'),
-			2 => __('/site/modules/'),
-	 	);
+		$radioOptions = array(
+            		1 => $this->config->urls->templates,
+            		2 => $this->config->urls->siteModules,
+        	);
 
 		$f->addOptions($radioOptions);
 
